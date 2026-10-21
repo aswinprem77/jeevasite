@@ -1,14 +1,14 @@
 /* =========================================================
    Jeeva Bricks & Metals — site script
    ---------------------------------------------------------
-   EDIT YOUR DETAILS HERE. The phone number, address
-   and WhatsApp link on the page is filled in from SITE.
+   EDIT YOUR DETAILS HERE. The phone number, address and
+   WhatsApp links on the page are all filled in from SITE.
    ========================================================= */
 
 const SITE = {
   phone: '+91 75589 04933',
   whatsapp: '917558904933',           // digits only, with 91 country code
-  address: 'Jeeva Bricks & Metals, Vadakke Poiloor – Muthappa Madappura Road, Thrippangottur, Kannur, Kerala 670693',
+  address: 'Vadakke Poiloor – Muthappa Madappura Road, Thrippangottur, Kannur, Kerala 670693',
   mapLink: 'https://maps.app.goo.gl/D2QrjWbBNBjkk9Tt7',
 };
 
@@ -31,11 +31,11 @@ const PRODUCTS = [
     id: 'psand',
     name: 'P-Sand',
     tag: 'Plastering Sand',
-    short: 'Finely graded sand for smooth plastering and block work.',
-    text: 'P-Sand is a finer, washed grade made specially for plastering. Its uniform fine particles give a smooth finish, good workability and fewer cracks on walls and ceilings.',
+    short: 'Finely graded sand for a smooth plaster finish on walls and ceilings.',
+    text: 'P-Sand is a finer grade made specially for plastering. Its uniform fine particles give a smooth finish, good workability and fewer cracks on walls and ceilings.',
     specs: [
       ['Size', '0 – 2.36 mm'],
-      ['Use', 'Wall & ceiling plastering, block work'],
+      ['Use', 'Wall & ceiling plastering, masonry'],
       ['Finish', 'Smooth, fine texture'],
       ['Supply', 'Tipper loads / per cft'],
     ],
@@ -45,9 +45,9 @@ const PRODUCTS = [
     name: 'Crushed Metal',
     tag: '6mm – 40mm',
     short: 'Graded granite aggregates in 6mm, 12mm, 20mm and 40mm for every kind of work.',
-    text: 'Our crushed metal (jelly) is cubical, clean and graded by size. Choose the size that suits your job — fine metal for precast and blocks, 20mm for concrete, 40mm for foundations and road base.',
+    text: 'Our crushed metal (jelly) is cubical, clean and graded by size. Choose the size that suits your job — fine metal for precast work, 20mm for structural concrete, 40mm for foundations and road base.',
     specs: [
-      ['6 mm', 'Blocks, precast, paver work'],
+      ['6 mm', 'Precast, toppings, paver beds'],
       ['12 mm', 'Thin slabs, precast, concrete'],
       ['20 mm', 'RCC, beams, columns, slabs'],
       ['40 mm', 'Foundations, PCC, road base'],
@@ -57,11 +57,11 @@ const PRODUCTS = [
     id: 'dust',
     name: 'Quarry Dust',
     tag: 'Filling & Base',
-    short: 'Fine crusher dust for yard filling, levelling and as a base under paving blocks.',
-    text: 'Quarry dust is the fine material left after crushing. It compacts well, making it ideal for filling, levelling plots and laying a firm bed under interlocking paving blocks and slabs.',
+    short: 'Fine crusher dust for filling, levelling and as a firm bed under paving.',
+    text: 'Quarry dust is the fine material left after crushing. It compacts well, making it ideal for filling, levelling plots and laying a firm bed under interlocking paving and slabs.',
     specs: [
       ['Use', 'Filling, levelling, paver bedding'],
-      ['Also for', 'Block manufacturing'],
+      ['Also for', 'Backfilling & trench beds'],
       ['Supply', 'Tipper loads'],
     ],
   },
@@ -77,60 +77,49 @@ const PRODUCTS = [
       ['Use', 'Roads, driveways, parking, yards'],
     ],
   },
-  {
-    id: 'blocks',
-    name: 'Bricks & Blocks',
-    tag: 'Walling',
-    short: 'Strong, uniform building blocks for fast and durable wall construction.',
-    text: 'Our building blocks are made with our own M-Sand and metal for consistent strength and size. Uniform blocks mean straighter walls, less mortar and faster construction.',
-    specs: [
-      ['Types', 'Solid blocks, hollow blocks'],
-      ['Use', 'Walls, compound walls, partitions'],
-      ['Supply', 'Per piece / bulk loads'],
-    ],
-  },
 ];
 
 /* Gallery. Put photos at images/gallery/1.jpg … 6.jpg */
 const GALLERY = [
-  { src: 'images/gallery/1.jpg', caption: 'Tipper Delivery' },
-  { src: 'images/gallery/2.jpg', caption: 'Loading Bucket' },
-  { src: 'images/gallery/3.jpg', caption: 'Aggregate Stockpiles' },
-  { src: 'images/gallery/4.jpg', caption: 'Loaded For Dispatch' },
-  { src: 'images/gallery/5.jpg', caption: 'Crushed Stone Yard' },
-  { src: 'images/gallery/6.jpg', caption: 'Hollow Blocks' },
+  { src: 'images/gallery/1.jpg', caption: 'Crushing & Screening Plant' },
+  { src: 'images/gallery/2.jpg', caption: 'Excavator at the Quarry Face' },
+  { src: 'images/gallery/3.jpg', caption: 'Feeding the Primary Crusher' },
+  { src: 'images/gallery/4.jpg', caption: 'Crusher Plant & Stockpiles' },
+  { src: 'images/gallery/5.jpg', caption: 'Aggregate Plant from Above' },
+  { src: 'images/gallery/6.jpg', caption: 'Granite Quarry' },
 ];
 
 /* Metal size guide. Photos at images/sizes/<id>.jpg */
 const SIZES = [
   {
-    id: '6mm', label: '6 mm', mm: 6,
-    text: 'Small chips that pack tightly — the go-to size for making blocks and precast items with a smooth face.',
-    uses: ['Hollow & solid blocks', 'Paver blocks', 'Precast items', 'Thin toppings'],
+    id: '6mm', label: '6 mm',
+    text: 'Small chips that pack tightly — ideal for precast work, thin toppings and paver laying beds.',
+    uses: ['Precast work', 'Thin toppings', 'Paver laying', 'Flooring chips'],
   },
   {
-    id: '12mm', label: '12 mm', mm: 12,
+    id: '12mm', label: '12 mm',
     text: 'A versatile medium size for thinner concrete sections and precast work where 20mm is too coarse.',
     uses: ['Thin slabs', 'Precast & lintels', 'Roof concrete', 'Flooring base'],
   },
   {
-    id: '20mm', label: '20 mm', mm: 20,
+    id: '20mm', label: '20 mm',
     text: 'The standard size for structural RCC — the strongest all-round choice for slabs, beams and columns.',
     uses: ['RCC slabs', 'Beams & columns', 'Footings', 'Ready-mix concrete'],
   },
   {
-    id: '40mm', label: '40 mm', mm: 40,
+    id: '40mm', label: '40 mm',
     text: 'Large, heavy aggregate for mass concrete and bases where thickness and load-bearing matter most.',
     uses: ['PCC foundations', 'Road base', 'Drainage layers', 'Mass concrete'],
   },
 ];
 
-
 /* ---------- helpers ---------- */
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+// Phones and portrait tablets get the tall, lighter hero crops.
+const usePortrait = matchMedia('(orientation: portrait) and (max-width: 959px)').matches;
 
-// Show a photo only if the file actually exists; otherwise the stone texture stays.
+// Show a photo only if the file actually exists; otherwise the plain panel stays.
 function loadBg(el, src) {
   const img = new Image();
   img.onload = () => {
@@ -157,7 +146,7 @@ function fillSite() {
 function renderProducts() {
   const grid = $('#productsGrid');
   grid.innerHTML = PRODUCTS.map(p => `
-    <article class="product-card reveal">
+    <article class="product-card">
       <div class="product-media-wrap">
         <div class="product-media img-fallback" data-img="images/products/${p.id}.jpg">
           <span class="product-tag">${p.tag}</span>
@@ -166,19 +155,30 @@ function renderProducts() {
       <div class="product-body">
         <h3>${p.name}</h3>
         <p>${p.short}</p>
-        <button class="read-more" type="button" data-product="${p.id}">Read More</button>
+        <button class="read-more" type="button" data-product="${p.id}">Details</button>
       </div>
     </article>`).join('');
 
-  $('#productSelect').insertAdjacentHTML('beforeend',
-    PRODUCTS.map(p => `<option value="${p.name}">${p.name}</option>`).join('') +
-    '<option value="Other / Multiple">Other / Multiple</option>');
+  // swipe position dots (phones only; hidden by CSS on wider screens)
+  const dots = $('#productDots');
+  dots.innerHTML = PRODUCTS.map((_, k) => `<span${k ? '' : ' class="is-active"'}></span>`).join('');
+  const dotEls = $$('span', dots);
+  grid.addEventListener('scroll', () => {
+    const card = grid.firstElementChild;
+    const step = card.offsetWidth + parseFloat(getComputedStyle(grid).columnGap || 14);
+    const k = Math.min(PRODUCTS.length - 1, Math.round(grid.scrollLeft / step));
+    dotEls.forEach((d, j) => d.classList.toggle('is-active', j === k));
+  }, { passive: true });
+
+  $('#productChips').innerHTML = [...PRODUCTS.map(p => p.name), 'Multiple / Other']
+    .map(name => `<label class="chip"><input type="radio" name="product" value="${name}"><span>${name}</span></label>`)
+    .join('');
 
   $('#footerProducts').innerHTML = PRODUCTS
     .map(p => `<li><a href="#products">${p.name}</a></li>`).join('');
 }
 
-/* ---------- product modal ---------- */
+/* ---------- product sheet ---------- */
 function initModal() {
   const modal = $('#productModal');
   let lastFocus = null;
@@ -195,10 +195,13 @@ function initModal() {
     media.style.backgroundImage = '';
     media.classList.remove('has-img');
     loadBg(media, `images/products/${p.id}.jpg`);
-    $('#modalQuote').onclick = () => { $('#productSelect').value = p.name; };
+    $('#modalQuote').onclick = () => {
+      const chip = $(`#productChips input[value="${p.name}"]`);
+      if (chip) chip.checked = true;
+    };
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
-    $('.modal-close', modal).focus();
+    $('.modal-close', modal).focus({ preventScroll: true });
   }
 
   function close() {
@@ -219,13 +222,15 @@ function initModal() {
 function renderGallery() {
   const grid = $('#galleryGrid');
   grid.innerHTML = GALLERY.map((g, i) => `
-    <figure class="gallery-item reveal" data-index="${i}" style="margin:0">
+    <figure class="gallery-item reveal" data-index="${i}">
       <div class="gallery-media img-fallback" data-img="${g.src}"></div>
       <figcaption>${g.caption}</figcaption>
     </figure>`).join('');
 
   const box = $('#lightbox');
   const img = $('#lightboxImg');
+  const caption = $('#lightboxCaption');
+  const close = () => { box.hidden = true; document.body.style.overflow = ''; };
 
   grid.addEventListener('click', e => {
     const item = e.target.closest('.gallery-item');
@@ -233,36 +238,35 @@ function renderGallery() {
     const g = GALLERY[item.dataset.index];
     img.src = g.src;
     img.alt = g.caption;
+    caption.textContent = g.caption;
     box.hidden = false;
+    document.body.style.overflow = 'hidden';
   });
-  box.addEventListener('click', e => {
-    if (e.target !== img) box.hidden = true;
-  });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
+  box.addEventListener('click', e => { if (e.target !== img) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
 }
 
-/* ---------- header, nav, scroll ---------- */
+/* ---------- header, menu, scroll ---------- */
 function initNav() {
   const header = $('#header');
   const nav = $('#nav');
   const toggle = $('#navToggle');
 
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
     toggle.setAttribute('aria-expanded', open);
-  });
-  $$('a', nav).forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  const onScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 10);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
+  toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  $$('a', nav).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // highlight current section in the menu
+  // highlight the current section in the menu
   const links = $$('a[href^="#"]:not(.btn)', nav);
   const sections = links.map(a => $(a.getAttribute('href'))).filter(Boolean);
   const spy = new IntersectionObserver(entries => {
@@ -306,8 +310,7 @@ function initHeroSlides() {
 function renderSizes() {
   const fan = $('#sizesFan');
   const tabs = $('#sizesTabs');
-  const n = SIZES.length;
-  const step = 180 / n;
+  const step = 180 / SIZES.length;
   // point on a circle around the fan centre (bottom middle), angle in degrees from the left
   const pt = (deg, r) => {
     const a = (180 - deg) * Math.PI / 180;
@@ -369,16 +372,24 @@ function initTabs() {
 function initQuoteForm() {
   const form = $('#quoteForm');
   const error = $('#formError');
+  const chips = $('#productChips');
+
+  form.addEventListener('change', e => {
+    if (e.target.name === 'product') chips.classList.remove('invalid');
+  });
 
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
     const required = ['name', 'phone', 'product', 'location'];
-    const missing = required.filter(k => !data[k].trim());
+    const missing = required.filter(k => !(data[k] || '').trim());
 
-    $$('input, select', form).forEach(el => el.classList.toggle('invalid', missing.includes(el.name)));
+    $$('input:not([type="radio"])', form).forEach(el => el.classList.toggle('invalid', missing.includes(el.name)));
+    chips.classList.toggle('invalid', missing.includes('product'));
     if (missing.length) {
-      error.textContent = 'Please fill in your name, phone, product and delivery location.';
+      error.textContent = 'Please add your name, phone, product and delivery location.';
+      const first = missing[0] === 'product' ? chips : form.elements[missing[0]];
+      first.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
     error.textContent = '';
@@ -411,7 +422,7 @@ function initReveal() {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   els.forEach(el => io.observe(el));
 }
 
@@ -420,7 +431,7 @@ fillSite();
 renderProducts();
 renderGallery();
 renderSizes();
-$$('[data-img]').forEach(el => loadBg(el, el.dataset.img));
+$$('[data-img]').forEach(el => loadBg(el, (usePortrait && el.dataset.imgM) || el.dataset.img));
 initModal();
 initNav();
 initHeroSlides();

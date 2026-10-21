@@ -5,16 +5,9 @@ public with them. Replace with your own photos, or add credits, before launch.
 about.jpg, about-2.jpg, hero-3.jpg  -> reference images supplied by the user (source unknown)
 
 products/psand.jpg               CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:M-Sand_in_Salem.jpg
-gallery/1.jpg                    Public domain  https://commons.wikimedia.org/wiki/File:Afghan_HINO_dump_truck.jpg
-gallery/2.jpg                    CC BY 4.0      https://commons.wikimedia.org/wiki/File:Excavator_bucket_~10082203.jpg
-gallery/3.jpg                    CC BY 2.0      https://commons.wikimedia.org/wiki/File:Sorted_gravel_pile_from_Pleistocene_glacial_outwash_(St._Louisville_gravel_pits,_Licking_County,_Ohio,_USA)_12_(31370402827).jpg
-gallery/4.jpg                    CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:Blue_Volvo_FMX_truck_for_gravel_transport.jpg
-gallery/5.jpg                    CC BY 2.0      https://commons.wikimedia.org/wiki/File:Sorted_gravel_pile_from_Pleistocene_glacial_outwash_(St._Louisville_gravel_pits,_Licking_County,_Ohio,_USA)_17_(45396483065).jpg
-gallery/6.jpg                    CC0            https://commons.wikimedia.org/wiki/File:Close-Up_of_Stacked_Concrete_Blocks_in_Sunlight.jpg
 hero-1.jpg                       CC BY 2.0      https://commons.wikimedia.org/wiki/File:Sorted_gravel_pile_from_Pleistocene_glacial_outwash_(St._Louisville_gravel_pits,_Licking_County,_Ohio,_USA)_24_(45396448725).jpg
 hero-2.jpg                       Public domain  https://commons.wikimedia.org/wiki/File:Afghan_dumper_truck.jpg
 process.jpg                      CC BY 4.0      https://commons.wikimedia.org/wiki/File:Gravel_hoppers_and_conveyor_belt,_Oban,_July_2020.jpg
-products/blocks.jpg              CC BY-SA 3.0   https://commons.wikimedia.org/wiki/File:19_luk_9_g%C3%B6zl%C3%BC_briket.jpg
 products/dust.jpg                CC0            https://commons.wikimedia.org/wiki/File:Truck_delivering_gravel_to_individual_household_garden.jpg
 products/gsb.jpg                 CC BY 2.0      https://commons.wikimedia.org/wiki/File:Dump_trucks_working_a_chip_seal_(52260674412).jpg
 products/metal.jpg               CC BY 2.0      https://commons.wikimedia.org/wiki/File:Sorted_gravel_pile_from_Pleistocene_glacial_outwash_(St._Louisville_gravel_pits,_Licking_County,_Ohio,_USA)_16_(31370385037).jpg
@@ -24,3 +17,9 @@ sizes/20mm.jpg                   CC BY-SA 3.0   https://commons.wikimedia.org/wi
 sizes/40mm.jpg                   CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:Stone_crushed_into_building_material.jpg
 sizes/6mm.jpg                    CC BY-SA 3.0   https://commons.wikimedia.org/wiki/File:Stone_Crush_Metel.JPG
 why.jpg                          CC BY-SA 3.0   https://commons.wikimedia.org/wiki/File:Volvo_truck_with_gravel_(Minsk).jpg
+gallery/1.jpg                    CC BY 2.0      https://commons.wikimedia.org/wiki/File:Conveyor_and_AggMax_with_crushing_plant_in_background_(8401030653).jpg
+gallery/2.jpg                    CC BY-SA 2.0   https://commons.wikimedia.org/wiki/File:Excavator,_Callow_Rock_Quarry_-_geograph.org.uk_-_5964712.jpg
+gallery/3.jpg                    CC BY 4.0      https://commons.wikimedia.org/wiki/File:Excavator_loading_material_into_crushing_plant_Koskela_depot_01.jpg
+gallery/4.jpg                    CC BY 3.0      https://commons.wikimedia.org/wiki/File:Crusher_Plant_-_panoramio.jpg
+gallery/5.jpg                    CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:Aggregate_Processing_Plant.jpg
+gallery/6.jpg                    CC BY 4.0      https://commons.wikimedia.org/wiki/File:San_Rafael_Rock_Quarry_viewed_from_above.jpg
