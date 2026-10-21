@@ -1,15 +1,13 @@
 /* =========================================================
    Jeeva Bricks & Metals — site script
    ---------------------------------------------------------
-   EDIT YOUR DETAILS HERE. Every phone number, email, address
+   EDIT YOUR DETAILS HERE. The phone number, address
    and WhatsApp link on the page is filled in from SITE.
    ========================================================= */
 
 const SITE = {
-  phone: '+91 00000 00000',          // TODO: real phone number, shown on the site
-  whatsapp: '910000000000',           // TODO: WhatsApp number, digits only, with 91 country code
-  email: 'info@jeevabricks.in',       // TODO: real email address
-  hours: 'Mon – Sat: 8:00 AM – 6:00 PM', // TODO: confirm working hours
+  phone: '+91 75589 04933',
+  whatsapp: '917558904933',           // digits only, with 91 country code
   address: 'Jeeva Bricks & Metals, Vadakke Poiloor – Muthappa Madappura Road, Thrippangottur, Kannur, Kerala 670693',
   mapLink: 'https://maps.app.goo.gl/D2QrjWbBNBjkk9Tt7',
 };
@@ -28,7 +26,6 @@ const PRODUCTS = [
       ['Source', 'Crushed granite'],
       ['Supply', 'Tipper loads / per cft'],
     ],
-    icon: 'grain',
   },
   {
     id: 'psand',
@@ -42,7 +39,6 @@ const PRODUCTS = [
       ['Finish', 'Smooth, fine texture'],
       ['Supply', 'Tipper loads / per cft'],
     ],
-    icon: 'fine',
   },
   {
     id: 'metal',
@@ -56,7 +52,6 @@ const PRODUCTS = [
       ['20 mm', 'RCC, beams, columns, slabs'],
       ['40 mm', 'Foundations, PCC, road base'],
     ],
-    icon: 'stones',
   },
   {
     id: 'dust',
@@ -69,7 +64,6 @@ const PRODUCTS = [
       ['Also for', 'Block manufacturing'],
       ['Supply', 'Tipper loads'],
     ],
-    icon: 'dust',
   },
   {
     id: 'gsb',
@@ -82,7 +76,6 @@ const PRODUCTS = [
       ['Wet Mix (WMM)', 'Base layer under tar / concrete'],
       ['Use', 'Roads, driveways, parking, yards'],
     ],
-    icon: 'road',
   },
   {
     id: 'blocks',
@@ -95,7 +88,6 @@ const PRODUCTS = [
       ['Use', 'Walls, compound walls, partitions'],
       ['Supply', 'Per piece / bulk loads'],
     ],
-    icon: 'bricks',
   },
 ];
 
@@ -133,14 +125,6 @@ const SIZES = [
   },
 ];
 
-const ICONS = {
-  grain: '<path d="M5 18a2 2 0 1 1 0 .01zm5-3a2 2 0 1 1 0 .01zm5 3a2 2 0 1 1 0 .01zm-5 3a1.5 1.5 0 1 1 0 .01zM7 12a1.5 1.5 0 1 1 0 .01zm6-1a2 2 0 1 1 0 .01zm5 1a1.5 1.5 0 1 1 0 .01zM10 7a1.5 1.5 0 1 1 0 .01zm5 0a1.2 1.2 0 1 1 0 .01zM2 21h20v1.5H2z"/>',
-  fine: '<path d="M3 20h18v2H3zm2-3h14l-2-4H7zm3-6h8l-1.5-3h-5zm2-5h4l-1-2h-2z"/>',
-  stones: '<path d="M3 20l3-6 5 1 2 5zm9 0 2-6 4-1 3 7zM6 12l2-5 5-1 2 5-4 3zm9-3 1-4 4 1 1 4-3 2z"/>',
-  dust: '<path d="M2 20c2-5 6-8 10-8s8 3 10 8zm5-10a1 1 0 1 1 0 .01zm4-3a1 1 0 1 1 0 .01zm5 2a1 1 0 1 1 0 .01zM9 4a.8.8 0 1 1 0 .01zm5 0a.8.8 0 1 1 0 .01z"/>',
-  road: '<path d="M10 2h4v4h-4zm0 7h4v6h-4zm0 9h4v4h-4zM2 22 7 2h2L5 22zm20 0h-3L15 2h2z"/>',
-  bricks: '<path d="M2 4h9v5H2zm11 0h9v5h-9zM2 11h4v5H2zm6 0h9v5H8zm11 0h3v5h-3zM2 18h9v4H2zm11 0h9v4h-9z"/>',
-};
 
 /* ---------- helpers ---------- */
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -152,7 +136,6 @@ function loadBg(el, src) {
   img.onload = () => {
     el.style.backgroundImage = `url("${src}")`;
     el.classList.add('has-img');
-    el.closest('.product-card')?.classList.add('has-img');
   };
   img.src = src;
 }
@@ -163,11 +146,8 @@ function fillSite() {
   const wa = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Hi Jeeva Bricks & Metals, I would like to enquire about your products.')}`;
 
   $$('[data-site="phone"]').forEach(el => (el.textContent = SITE.phone));
-  $$('[data-site="email"]').forEach(el => (el.textContent = SITE.email));
-  $$('[data-site="hours"]').forEach(el => (el.textContent = SITE.hours));
   $$('[data-site="address"]').forEach(el => (el.textContent = SITE.address));
   $$('[data-site="phone-link"]').forEach(el => (el.href = tel));
-  $$('[data-site="email-link"]').forEach(el => (el.href = 'mailto:' + SITE.email));
   $$('[data-site="whatsapp-link"]').forEach(el => (el.href = wa));
   $$('[data-site="map-link"]').forEach(el => (el.href = SITE.mapLink));
   $('#year').textContent = new Date().getFullYear();
@@ -180,7 +160,6 @@ function renderProducts() {
     <article class="product-card reveal">
       <div class="product-media-wrap">
         <div class="product-media img-fallback" data-img="images/products/${p.id}.jpg">
-          <span class="product-icon"><svg viewBox="0 0 24 24">${ICONS[p.icon]}</svg></span>
           <span class="product-tag">${p.tag}</span>
         </div>
       </div>
@@ -267,7 +246,6 @@ function initNav() {
   const header = $('#header');
   const nav = $('#nav');
   const toggle = $('#navToggle');
-  const toTop = $('#toTop');
 
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
@@ -280,7 +258,6 @@ function initNav() {
 
   const onScroll = () => {
     header.classList.toggle('scrolled', window.scrollY > 10);
-    toTop.classList.toggle('show', window.scrollY > 600);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -297,20 +274,7 @@ function initNav() {
   sections.forEach(s => spy.observe(s));
 }
 
-/* ---------- hero rotator + slideshow ---------- */
-function initRotator() {
-  const items = $$('#rotator > span');
-  if (items.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  let i = 0;
-  setInterval(() => {
-    const current = items[i];
-    i = (i + 1) % items.length;
-    current.classList.replace('is-active', 'is-leaving');
-    setTimeout(() => current.classList.remove('is-leaving'), 600);
-    items[i].classList.add('is-active');
-  }, 3200);
-}
-
+/* ---------- hero slideshow ---------- */
 function initHeroSlides() {
   const slides = $$('#heroSlides .hero-bg');
   const dots = $('#heroDots');
@@ -364,7 +328,6 @@ function renderSizes() {
   tabs.innerHTML = SIZES.map((s, k) =>
     `<button type="button" role="tab" data-size="${k}">${s.label}</button>`).join('');
 
-  const pxPerMm = 96 / 25.4;
   function select(k) {
     const s = SIZES[k];
     $$('[data-size]').forEach(el => {
@@ -373,8 +336,6 @@ function renderSizes() {
       if (el.getAttribute('role') === 'tab') el.setAttribute('aria-selected', on);
     });
     $$('.fan-label').forEach(el => el.classList.toggle('is-active', +el.dataset.label === k));
-    const stone = $('#sizesStone');
-    stone.style.width = stone.style.height = Math.round(s.mm * pxPerMm) + 'px';
     $('#sizesTitle').textContent = `${s.label} Metal`;
     $('#sizesText').textContent = s.text;
     $('#sizesUses').innerHTML = s.uses.map(u => `<li>${u}</li>`).join('');
@@ -462,7 +423,6 @@ renderSizes();
 $$('[data-img]').forEach(el => loadBg(el, el.dataset.img));
 initModal();
 initNav();
-initRotator();
 initHeroSlides();
 initTabs();
 initQuoteForm();

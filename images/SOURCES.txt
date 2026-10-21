@@ -4,7 +4,7 @@ public with them. Replace with your own photos, or add credits, before launch.
 
 about.jpg, about-2.jpg, hero-3.jpg  -> reference images supplied by the user (source unknown)
 
-cta.jpg + products/psand.jpg     CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:M-Sand_in_Salem.jpg
+products/psand.jpg               CC BY-SA 4.0   https://commons.wikimedia.org/wiki/File:M-Sand_in_Salem.jpg
 gallery/1.jpg                    Public domain  https://commons.wikimedia.org/wiki/File:Afghan_HINO_dump_truck.jpg
 gallery/2.jpg                    CC BY 4.0      https://commons.wikimedia.org/wiki/File:Excavator_bucket_~10082203.jpg
 gallery/3.jpg                    CC BY 2.0      https://commons.wikimedia.org/wiki/File:Sorted_gravel_pile_from_Pleistocene_glacial_outwash_(St._Louisville_gravel_pits,_Licking_County,_Ohio,_USA)_12_(31370402827).jpg
